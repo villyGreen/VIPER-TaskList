@@ -12,9 +12,10 @@ import UIKit
 class StartRouter: PresenterToRouterStartProtocol {
     
     // MARK: Static methods
-    static func createModule() -> UIViewController {
+    static func createModule() -> UIViewController? {
         
-        let viewController = StartViewController()
+        guard let viewController = Storyboard.make(.start).instantiate(.start)
+                as? StartViewController else { return nil }
         
         let presenter: ViewToPresenterStartProtocol & InteractorToPresenterStartProtocol = StartPresenter()
         

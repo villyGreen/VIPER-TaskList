@@ -15,8 +15,7 @@
 		E6252F8529178CD200BC0496 /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F8029178CD200BC0496 /* StartInteractor.swift */; };
 		E636A47129177766001D0A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47029177766001D0A36 /* AppDelegate.swift */; };
 		E636A47329177766001D0A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47229177766001D0A36 /* SceneDelegate.swift */; };
-		E636A47529177766001D0A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47429177766001D0A36 /* ViewController.swift */; };
-		E636A47829177766001D0A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E636A47629177766001D0A36 /* Main.storyboard */; };
+		E636A47829177766001D0A36 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E636A47629177766001D0A36 /* Start.storyboard */; };
 		E636A47B29177766001D0A36 /* ViPER_TaskList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E636A47929177766001D0A36 /* ViPER_TaskList.xcdatamodeld */; };
 		E636A47D29177767001D0A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E636A47C29177767001D0A36 /* Assets.xcassets */; };
 		E636A48029177767001D0A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E636A47E29177767001D0A36 /* LaunchScreen.storyboard */; };
@@ -39,8 +38,7 @@
 		E636A46D29177766001D0A36 /* ViPER-TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ViPER-TaskList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E636A47029177766001D0A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E636A47229177766001D0A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E636A47429177766001D0A36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E636A47729177766001D0A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E636A47729177766001D0A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Start.storyboard; sourceTree = "<group>"; };
 		E636A47A29177766001D0A36 /* ViPER_TaskList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViPER_TaskList.xcdatamodel; sourceTree = "<group>"; };
 		E636A47C29177767001D0A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E636A47F29177767001D0A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,6 +139,7 @@
 		E6252F8929178D1B00BC0496 /* User interfaice */ = {
 			isa = PBXGroup;
 			children = (
+				E636A47629177766001D0A36 /* Start.storyboard */,
 				E6252F7F29178CD200BC0496 /* StartViewController.swift */,
 			);
 			path = "User interfaice";
@@ -183,8 +182,6 @@
 			children = (
 				E6252F8629178CEF00BC0496 /* Modules */,
 				E606E01829178B3300511BF8 /* Common */,
-				E636A47429177766001D0A36 /* ViewController.swift */,
-				E636A47629177766001D0A36 /* Main.storyboard */,
 				E636A488291777B4001D0A36 /* Resources */,
 			);
 			path = "ViPER-TaskList";
@@ -232,6 +229,7 @@
 				E636A46929177766001D0A36 /* Sources */,
 				E636A46A29177766001D0A36 /* Frameworks */,
 				E636A46B29177766001D0A36 /* Resources */,
+				E60B58E32917A51500135307 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -284,11 +282,32 @@
 				E636A48029177767001D0A36 /* LaunchScreen.storyboard in Resources */,
 				E636A48B291777E4001D0A36 /* Localizable.strings in Resources */,
 				E636A47D29177767001D0A36 /* Assets.xcassets in Resources */,
-				E636A47829177766001D0A36 /* Main.storyboard in Resources */,
+				E636A47829177766001D0A36 /* Start.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E60B58E32917A51500135307 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/newOutputFile",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E636A46929177766001D0A36 /* Sources */ = {
@@ -299,7 +318,6 @@
 				E636A49B29177C02001D0A36 /* EntityProtocol.swift in Sources */,
 				E636A4972917788B001D0A36 /* CoreDataEngine.swift in Sources */,
 				E6252F8129178CD200BC0496 /* StartContract.swift in Sources */,
-				E636A47529177766001D0A36 /* ViewController.swift in Sources */,
 				E6252F8429178CD200BC0496 /* StartViewController.swift in Sources */,
 				E636A47129177766001D0A36 /* AppDelegate.swift in Sources */,
 				E636A47329177766001D0A36 /* SceneDelegate.swift in Sources */,
@@ -317,12 +335,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E636A47629177766001D0A36 /* Main.storyboard */ = {
+		E636A47629177766001D0A36 /* Start.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E636A47729177766001D0A36 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Start.storyboard;
 			sourceTree = "<group>";
 		};
 		E636A47E29177767001D0A36 /* LaunchScreen.storyboard */ = {
@@ -469,10 +487,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ViPER-TaskList/App/Info.plist";
+				INFOPLIST_FILE = "ViPER-TaskList/Common/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,10 +513,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ViPER-TaskList/App/Info.plist";
+				INFOPLIST_FILE = "ViPER-TaskList/Common/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

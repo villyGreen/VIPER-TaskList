@@ -10,8 +10,8 @@ import Foundation
 
 
 // MARK: View Output (Presenter -> View)
-protocol PresenterToViewStartProtocol {
-   
+protocol PresenterToViewStartProtocol: AnyObject {
+    func dataWasLoad(_ data: Data)
 }
 
 
@@ -21,6 +21,8 @@ protocol ViewToPresenterStartProtocol {
     var view: PresenterToViewStartProtocol? { get set }
     var interactor: PresenterToInteractorStartProtocol? { get set }
     var router: PresenterToRouterStartProtocol? { get set }
+    
+    func buttonWasTapped()
 }
 
 
@@ -28,16 +30,16 @@ protocol ViewToPresenterStartProtocol {
 protocol PresenterToInteractorStartProtocol {
     
     var presenter: InteractorToPresenterStartProtocol? { get set }
+    func tapButtonTapped()
 }
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterStartProtocol {
-    
+protocol InteractorToPresenterStartProtocol: AnyObject {
+    func dataWasLoad(_ data: Data)
 }
 
 
 // MARK: Router Input (Presenter -> Router)
 protocol PresenterToRouterStartProtocol {
-    
 }

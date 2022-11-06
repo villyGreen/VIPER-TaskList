@@ -8,14 +8,14 @@
 import UIKit
 
 enum Storyboard: String {
-    case main = "Start"
+    case start = "Start"
     static func make(_ storyboard: Storyboard, bundle: Bundle? = .main) -> UIStoryboard {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
 }
 
 enum StoryboardID: String {
-   case startScreen
+   case start
 }
 
 extension UIStoryboard {

@@ -9,7 +9,12 @@
 import Foundation
 
 class StartInteractor: PresenterToInteractorStartProtocol {
-
     // MARK: Properties
-    var presenter: InteractorToPresenterStartProtocol?
+    weak var presenter: InteractorToPresenterStartProtocol?
+    
+    func tapButtonTapped() {
+        let string = "data was load"
+        let data = string.data(using: .utf8)
+        presenter?.dataWasLoad(data ?? Data())
+    }
 }
