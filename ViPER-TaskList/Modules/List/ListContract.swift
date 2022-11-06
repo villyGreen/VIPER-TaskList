@@ -24,6 +24,7 @@ protocol ViewToPresenterListProtocol {
     func getDataSource() -> [Task]
     func viewDidAppear()
     func addData(_ data: String)
+    func deleteDataFromIndexPath(_ indexPath: Int)
 }
 
 
@@ -35,7 +36,7 @@ protocol PresenterToInteractorListProtocol {
     
     func getDataFromStorage()
     func addDataToStorage(_ data: Task)
-    func deleteDataFromStorage(_ data: Task)
+    func deleteDataFromStorage(indexPath: Int)
 }
 
 

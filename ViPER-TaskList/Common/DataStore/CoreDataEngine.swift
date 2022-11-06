@@ -24,10 +24,10 @@ final class CoreDataEngine {
         switch cdEntity {
         case .tasks:
             let task = CDTaskEntity(entity: entity, insertInto: coreDataManager.context)
-            task.task = data.dictionary?[.task] as? String
-            task.uuid = data.dictionary?[.uuid] as? UUID
-            task.date = data.dictionary?[.date] as? Date
-            task.creator = data.dictionary?[.user] as? NSObject
+            task.task = data.dictionary[.task] as? String
+            task.uuid = data.dictionary[.uuid] as? UUID
+            task.date = data.dictionary[.date] as? Date
+//            task.creator = data.dictionary?[.user] as? NSObject
         }
         
         do {
@@ -47,7 +47,6 @@ final class CoreDataEngine {
             let convertedTasks = tasks.map {
                 Task(uuid: $0.uuid ?? UUID(),
                      task: $0.task ?? "",
-                     creator: $0.creator as! User,
                      date: $0.date ?? Date()) }
             
             return convertedTasks
@@ -56,8 +55,8 @@ final class CoreDataEngine {
     
     func delete(_ data: Entity, cdEntity: CDEntity) {
         let predicateRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: cdEntity.rawValue)
-        predicateRequest.predicate = NSPredicate(format: "uid == %@",
-                                                 (data.dictionary?[.uuid] as? UUID)?.uuidString ?? "")
+        predicateRequest.predicate = NSPredicate(format: "uuid == %@",
+                                                 (data.dictionary[.uuid] as? UUID)?.uuidString ?? "")
         
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: predicateRequest)
         do {

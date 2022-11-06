@@ -27,7 +27,8 @@ class ListInteractor: PresenterToInteractorListProtocol {
         presenter?.updateData()
     }
     
-    func deleteDataFromStorage(_ data: Task) {
+    func deleteDataFromStorage(indexPath: Int) {
+        guard let data = dataSource?[indexPath] else { return }
         dataStore.store.delete(data, cdEntity: .tasks)
         getDataFromStorage()
         presenter?.updateData()

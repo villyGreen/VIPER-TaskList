@@ -26,13 +26,13 @@ class ListPresenter: ViewToPresenterListProtocol {
     }
     
     func addData(_ data: String) {
-        let user = User()
-        user.name = "Sasha"
-        user.surname = "KuKa"
-        let task = Task(uuid: UUID(), task: data, creator: user, date: Date())
+        let task = Task(uuid: UUID() ,task: data, date: Date())
         interactor?.addDataToStorage(task)
     }
 
+    func deleteDataFromIndexPath(_ indexPath: Int) {
+        interactor?.deleteDataFromStorage(indexPath: indexPath)
+    }
 }
 
 extension ListPresenter: InteractorToPresenterListProtocol {

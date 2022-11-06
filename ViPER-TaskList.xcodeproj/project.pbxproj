@@ -37,6 +37,7 @@
 		E6A6BCD62917E377002EDA1A /* RootWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6BCD52917E377002EDA1A /* RootWireFrame.swift */; };
 		E6A6BCD92917E421002EDA1A /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6BCD82917E421002EDA1A /* UserDefaultsPropertyWrapper.swift */; };
 		E6A6BCDB2917E901002EDA1A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6BCDA2917E901002EDA1A /* Extensions.swift */; };
+		E6A6BCDD29180114002EDA1A /* ListTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6A6BCDC29180114002EDA1A /* ListTableViewCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		E6A6BCD52917E377002EDA1A /* RootWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireFrame.swift; sourceTree = "<group>"; };
 		E6A6BCD82917E421002EDA1A /* UserDefaultsPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPropertyWrapper.swift; sourceTree = "<group>"; };
 		E6A6BCDA2917E901002EDA1A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E6A6BCDC29180114002EDA1A /* ListTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			children = (
 				E6A6BCD02917DBB9002EDA1A /* ListTableViewCell.swift */,
 				E6A6BCD12917DBB9002EDA1A /* ListTableViewCell.xib */,
+				E6A6BCDC29180114002EDA1A /* ListTableViewCellDelegate.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				E6252F8529178CD200BC0496 /* StartInteractor.swift in Sources */,
 				E6A6BCC62917DA7E002EDA1A /* ListPresenter.swift in Sources */,
 				E6A6BCD22917DBB9002EDA1A /* ListTableViewCell.swift in Sources */,
+				E6A6BCDD29180114002EDA1A /* ListTableViewCellDelegate.swift in Sources */,
 				E636A47B29177766001D0A36 /* ViPER_TaskList.xcdatamodeld in Sources */,
 				E6252F8329178CD200BC0496 /* StartRouter.swift in Sources */,
 				E6A6BCDB2917E901002EDA1A /* Extensions.swift in Sources */,

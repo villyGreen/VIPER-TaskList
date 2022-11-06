@@ -75,7 +75,9 @@ private extension ListViewController {
 extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ListTableViewCell.self), for: indexPath) as? ListTableViewCell
-        cell?.configureCell()
+        guard let data = presenter?.getDataSource() else { return UITableViewCell()}
+        cell?.configureCell(data: data[indexPath.row], indexPath: indexPath.row, delegate: self)
+
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -85,20 +87,10 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 65
     }
-    
-    func tableView(_ tableView: UITableView,
-                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-       
-        let action = UIContextualAction(
-            style: .destructive,
-            title: "Delete",
-            handler: { (_, _, completion) in
-                completion(true)
-            })
-        
-        action.backgroundColor = .red
-        let configuration = UISwipeActionsConfiguration(actions: [action])
-        configuration.performsFirstActionWithFullSwipe = false
-        return configuration
+}
+
+extension ListViewController: ListTableViewDelegate {
+    func deleteTaskFromIndexPath(_ indexPath: Int) {
+        presenter?.deleteDataFromIndexPath(indexPath)
     }
 }

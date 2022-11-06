@@ -17,25 +17,35 @@ enum EntityKey: String {
 }
 
 struct Task: Entity {
-    var dictionary: [EntityKey : Any]?
+    var dictionary: [EntityKey : Any] = [:]
+    
+    init(uuid: UUID, task: String, date: Date) {
+        self.uuid = uuid
+        self.task = task
+        self.date = date
+    }
+    
+    
     var uuid: UUID {
-        willSet {
-            dictionary?[.uuid] = newValue
+        set {
+            dictionary[.uuid] = newValue
+        } get {
+            return (dictionary[.uuid] as? UUID) ?? UUID()
         }
     }
     var task: String {
-        willSet {
-            dictionary?[.task] = newValue
+        set {
+            dictionary[.task] = newValue
+        } get {
+            return (dictionary[.task] as? String) ?? ""
         }
     }
-    var creator: User {
-        willSet {
-            dictionary?[.user] = newValue
-        }
-    }
+
     var date: Date {
-        willSet {
-            dictionary?[.date] = newValue
+        set {
+            dictionary[.date] = newValue
+        } get {
+            return (dictionary[.date] as? Date) ?? Date()
         }
     }
 }

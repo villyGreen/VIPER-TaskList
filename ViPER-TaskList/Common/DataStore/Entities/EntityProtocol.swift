@@ -8,5 +8,5 @@
 import Foundation
 
 protocol Entity {
-    var dictionary: [EntityKey: Any]? { get set }
+    var dictionary: [EntityKey: Any] { get set }
 }
