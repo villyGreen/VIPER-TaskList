@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+final class DataStore {
+    var store: CoreDataEngine {
+        return .sharedInstance
+    }
+}

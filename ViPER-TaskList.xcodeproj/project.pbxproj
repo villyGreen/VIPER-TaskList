@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E606E01429178A6800511BF8 /* StoryBoardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E606E01329178A6800511BF8 /* StoryBoardHelper.swift */; };
+		E6252F8129178CD200BC0496 /* StartContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F7C29178CD200BC0496 /* StartContract.swift */; };
+		E6252F8229178CD200BC0496 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F7D29178CD200BC0496 /* StartPresenter.swift */; };
+		E6252F8329178CD200BC0496 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F7E29178CD200BC0496 /* StartRouter.swift */; };
+		E6252F8429178CD200BC0496 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F7F29178CD200BC0496 /* StartViewController.swift */; };
+		E6252F8529178CD200BC0496 /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6252F8029178CD200BC0496 /* StartInteractor.swift */; };
 		E636A47129177766001D0A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47029177766001D0A36 /* AppDelegate.swift */; };
 		E636A47329177766001D0A36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47229177766001D0A36 /* SceneDelegate.swift */; };
 		E636A47529177766001D0A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A47429177766001D0A36 /* ViewController.swift */; };
@@ -20,9 +26,16 @@
 		E636A4952917787E001D0A36 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A4942917787E001D0A36 /* CoreDataManager.swift */; };
 		E636A4972917788B001D0A36 /* CoreDataEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A4962917788B001D0A36 /* CoreDataEngine.swift */; };
 		E636A49929177893001D0A36 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A49829177893001D0A36 /* DataStore.swift */; };
+		E636A49B29177C02001D0A36 /* EntityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E636A49A29177C02001D0A36 /* EntityProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E606E01329178A6800511BF8 /* StoryBoardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardHelper.swift; sourceTree = "<group>"; };
+		E6252F7C29178CD200BC0496 /* StartContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartContract.swift; sourceTree = "<group>"; };
+		E6252F7D29178CD200BC0496 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		E6252F7E29178CD200BC0496 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		E6252F7F29178CD200BC0496 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		E6252F8029178CD200BC0496 /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		E636A46D29177766001D0A36 /* ViPER-TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ViPER-TaskList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E636A47029177766001D0A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E636A47229177766001D0A36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +52,7 @@
 		E636A4942917787E001D0A36 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		E636A4962917788B001D0A36 /* CoreDataEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEngine.swift; sourceTree = "<group>"; };
 		E636A49829177893001D0A36 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		E636A49A29177C02001D0A36 /* EntityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E606E01229178A5B00511BF8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E606E01329178A6800511BF8 /* StoryBoardHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E606E01529178ACA00511BF8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E636A49A29177C02001D0A36 /* EntityProtocol.swift */,
+				E606E01729178AF100511BF8 /* TaskEntity */,
+				E606E01629178ADA00511BF8 /* UserEntities */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E606E01629178ADA00511BF8 /* UserEntities */ = {
+			isa = PBXGroup;
+			children = (
+				E636A49229177853001D0A36 /* UserEntityModel.swift */,
+			);
+			path = UserEntities;
+			sourceTree = "<group>";
+		};
+		E606E01729178AF100511BF8 /* TaskEntity */ = {
+			isa = PBXGroup;
+			children = (
+				E636A49029177847001D0A36 /* TaskEntityModel.swift */,
+			);
+			path = TaskEntity;
+			sourceTree = "<group>";
+		};
+		E606E01829178B3300511BF8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E636A4872917778E001D0A36 /* App */,
+				E636A48F291777F4001D0A36 /* DataStore */,
+				E606E01229178A5B00511BF8 /* Helpers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E6252F8629178CEF00BC0496 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F8729178CFB00BC0496 /* Start */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		E6252F8729178CFB00BC0496 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F7C29178CD200BC0496 /* StartContract.swift */,
+				E6252F8B29178D2E00BC0496 /* Presenter */,
+				E6252F8A29178D2300BC0496 /* Routing */,
+				E6252F8929178D1B00BC0496 /* User interfaice */,
+				E6252F8829178D0100BC0496 /* Busines Logic */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		E6252F8829178D0100BC0496 /* Busines Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F8029178CD200BC0496 /* StartInteractor.swift */,
+			);
+			path = "Busines Logic";
+			sourceTree = "<group>";
+		};
+		E6252F8929178D1B00BC0496 /* User interfaice */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F7F29178CD200BC0496 /* StartViewController.swift */,
+			);
+			path = "User interfaice";
+			sourceTree = "<group>";
+		};
+		E6252F8A29178D2300BC0496 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F7E29178CD200BC0496 /* StartRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		E6252F8B29178D2E00BC0496 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E6252F7D29178CD200BC0496 /* StartPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		E636A46429177766001D0A36 = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +181,8 @@
 		E636A46F29177766001D0A36 /* ViPER-TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				E636A48F291777F4001D0A36 /* New Group */,
-				E636A4872917778E001D0A36 /* App */,
+				E6252F8629178CEF00BC0496 /* Modules */,
+				E606E01829178B3300511BF8 /* Common */,
 				E636A47429177766001D0A36 /* ViewController.swift */,
 				E636A47629177766001D0A36 /* Main.storyboard */,
 				E636A488291777B4001D0A36 /* Resources */,
@@ -100,17 +210,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E636A48F291777F4001D0A36 /* New Group */ = {
+		E636A48F291777F4001D0A36 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				E636A47929177766001D0A36 /* ViPER_TaskList.xcdatamodeld */,
-				E636A49229177853001D0A36 /* UserEntityModel.swift */,
+				E606E01529178ACA00511BF8 /* Entities */,
 				E636A4942917787E001D0A36 /* CoreDataManager.swift */,
 				E636A4962917788B001D0A36 /* CoreDataEngine.swift */,
 				E636A49829177893001D0A36 /* DataStore.swift */,
-				E636A49029177847001D0A36 /* TaskEntityModel.swift */,
+				E636A47929177766001D0A36 /* ViPER_TaskList.xcdatamodeld */,
 			);
-			path = "New Group";
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,15 +295,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6252F8229178CD200BC0496 /* StartPresenter.swift in Sources */,
+				E636A49B29177C02001D0A36 /* EntityProtocol.swift in Sources */,
 				E636A4972917788B001D0A36 /* CoreDataEngine.swift in Sources */,
+				E6252F8129178CD200BC0496 /* StartContract.swift in Sources */,
 				E636A47529177766001D0A36 /* ViewController.swift in Sources */,
+				E6252F8429178CD200BC0496 /* StartViewController.swift in Sources */,
 				E636A47129177766001D0A36 /* AppDelegate.swift in Sources */,
 				E636A47329177766001D0A36 /* SceneDelegate.swift in Sources */,
 				E636A49329177853001D0A36 /* UserEntityModel.swift in Sources */,
+				E6252F8529178CD200BC0496 /* StartInteractor.swift in Sources */,
 				E636A47B29177766001D0A36 /* ViPER_TaskList.xcdatamodeld in Sources */,
+				E6252F8329178CD200BC0496 /* StartRouter.swift in Sources */,
 				E636A4952917787E001D0A36 /* CoreDataManager.swift in Sources */,
 				E636A49929177893001D0A36 /* DataStore.swift in Sources */,
 				E636A49129177847001D0A36 /* TaskEntityModel.swift in Sources */,
+				E606E01429178A6800511BF8 /* StoryBoardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
