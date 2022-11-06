@@ -19,6 +19,12 @@ class StartPresenter: ViewToPresenterStartProtocol {
         interactor?.tapButtonTapped()
     }
     
+    func presentToListViewController() {
+        StartRouter.presentListModule { [weak self] viewController in
+            self?.view?.presentToListViewController(viewController)
+        }
+    }
+    
 }
 
 extension StartPresenter: InteractorToPresenterStartProtocol {

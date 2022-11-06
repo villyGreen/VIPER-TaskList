@@ -28,4 +28,9 @@ class StartRouter: PresenterToRouterStartProtocol {
         return viewController
     }
     
+    static func presentListModule(completion:
+                                  @escaping (_ viewController: ListViewController) -> Void) {
+        guard let listViewController = ListRouter.createModule() as? ListViewController else { return }
+        completion(listViewController)
+    }
 }

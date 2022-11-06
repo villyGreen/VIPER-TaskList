@@ -12,8 +12,8 @@ import Foundation
 // MARK: View Output (Presenter -> View)
 protocol PresenterToViewStartProtocol: AnyObject {
     func dataWasLoad(_ data: Data)
+    func presentToListViewController(_ viewController: ListViewController)
 }
-
 
 // MARK: View Input (View -> Presenter)
 protocol ViewToPresenterStartProtocol {
@@ -23,6 +23,7 @@ protocol ViewToPresenterStartProtocol {
     var router: PresenterToRouterStartProtocol? { get set }
     
     func buttonWasTapped()
+    func presentToListViewController()
 }
 
 

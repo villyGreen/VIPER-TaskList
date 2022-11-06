@@ -9,6 +9,7 @@ import UIKit
 
 enum Storyboard: String {
     case start = "Start"
+    case list = "List"
     static func make(_ storyboard: Storyboard, bundle: Bundle? = .main) -> UIStoryboard {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
@@ -16,6 +17,7 @@ enum Storyboard: String {
 
 enum StoryboardID: String {
    case start
+    case listVC
 }
 
 extension UIStoryboard {
